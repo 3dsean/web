@@ -2,88 +2,81 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Software Developer Services</title>
+<title>Input Form Example</title>
 <style>
   body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-  }
-  nav {
-    background-color: #444;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  nav a {
-    padding: 14px 20px;
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-  }
-  nav a:hover {
-    background-color: #555;
-  }
-  section {
     padding: 20px;
-    text-align: center;
   }
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
+  form {
+    max-width: 400px;
+    margin: auto;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
     width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #0056b3;
   }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Software Developer Services</h1>
-</header>
+<h2>Input Form Example</h2>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-  <h2>About Me</h2>
-  <p>Welcome to my website! I am a passionate software developer specializing in creating innovative solutions, applications, and services tailored to meet your specific requirements, objectives, and goals.</p>
-</section>
-
-<section id="services">
-  <h2>Services</h2>
-  <ul>
-    <li>Custom Software Development</li>
-    <li>Web Application Development</li>
-    <li>Mobile App Development</li>
-    <li>Database Design and Management</li>
-    <li>API Integration and Development</li>
-    <li>Software Consulting and Support</li>
-  </ul>
-</section>
-
-<section id="contact">
-  <h2>Contact Me</h2>
-  <p>If you are interested in working together or have any inquiries, please feel free to contact me.</p>
-  <p>Email: <a href="mailto:info@developer.com">info@developer.com</a></p>
-</section>
-
-<footer>
-  <p>&copy; 2023 Software Developer Services. All Rights Reserved.</p>
-</footer>
+<form action="#" method="post">
+  
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="Enter your name" required>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" placeholder="Enter your password" required>
+  
+  <label>Gender:</label>
+  <input type="radio" id="male" name="gender" value="male" checked>
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label>
+  
+  <label>Interests:</label>
+  <input type="checkbox" id="programming" name="interests" value="programming">
+  <label for="programming">Programming</label>
+  <input type="checkbox" id="gaming" name="interests" value="gaming">
+  <label for="gaming">Gaming</label>
+  
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+  
+  <input type="submit" value="Submit">
+  
+</form>
 
 </body>
 </html>
+
